@@ -40,5 +40,15 @@
                <servlet-name>addGroup</servlet-name>
                <url-pattern>/addGroup</url-pattern>
            </servlet-mapping>
+           <!--退群-->
+           <servlet>
+               <servlet-name>quitGroup</servlet-name>
+               <servlet-class>Servlet.QuitGroupServlet</servlet-class>
+           </servlet> 
+           <servlet-mapping>
+               <servlet-name>quitGroup</servlet-name>
+               <url-pattern>/quitGroup</url-pattern> 
+           </servlet-mapping>
+
 </web-app>
 
