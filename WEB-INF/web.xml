@@ -30,6 +30,15 @@
            <servlet-mapping>
                <servlet-name>createGroup</servlet-name>
                <url-pattern>/createGroup</url-pattern> 
-           </servlet-mapping> 
+           </servlet-mapping>
+           <!--加群--> 
+           <servlet>
+               <servlet-name>addGroup</servlet-name>
+               <servlet-class>Servlet.AddGroupServlet</servlet-class>
+           </servlet> 
+           <servlet-mapping>
+               <servlet-name>addGroup</servlet-name>
+               <url-pattern>/addGroup</url-pattern>
+           </servlet-mapping>
 </web-app>
 

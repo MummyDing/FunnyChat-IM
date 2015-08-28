@@ -106,7 +106,6 @@ public class RegisterServlet extends HttpServlet{
         OperDataBase.addSQLData(1,token);
         OperDataBase.addSQLData(2,username);
         if(OperDataBase.exeSQL() == -2){
-            out.println("endcharursdf");
             returnFail(); //插入失败
         }
     }
