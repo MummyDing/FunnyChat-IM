@@ -5,6 +5,10 @@ import javax.servlet.http.*;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 
+import net.sf.json.JSONArray;
+import net.sf.json.JSONException;
+import net.sf.json.JSONObject;
+
 import java.sql.*;
 import java.util.List;
 import java.util.ArrayList;
@@ -16,9 +20,18 @@ public class RegisterServlet extends HttpServlet{
     PostData postData = new PostData();
      PrintWriter out = null;
     private void returnFail(){
-        out.print("{\"code\":201}");
+        out.print("{\"code\":404}");
         OperDataBase. closeConn(); //关闭数据库
         return;
+    }
+    private String getJSONToken(String json){
+        try{
+            JSONObject jsonObject = JSONObject.fromObject(json);
+            String token = jsonObject.getString("token");
+            return token;
+        }catch(Exception e){
+            return "null";
+        }
     }
     public void doPost(HttpServletRequest  request,HttpServletResponse response)throws IOException,ServletException
     {
@@ -42,7 +55,6 @@ public class RegisterServlet extends HttpServlet{
         //查询到了 已经被注册
         try{
         if(rs.next()){
-            out.println("zhucele");
             returnFail();
             return;
         }
@@ -60,7 +72,6 @@ public class RegisterServlet extends HttpServlet{
         OperDataBase.addSQLData(3,password);
         OperDataBase.addSQLData(4,"null");
         if(OperDataBase.exeSQL() == -2){ //添加失败
-            out.println("tianjiashibai");
             returnFail();
             return;
         }
@@ -78,7 +89,6 @@ public class RegisterServlet extends HttpServlet{
         if(rs.next()){
             userId = Integer.toString(rs.getInt("userId"));
         }else{
-            out.println("chaxunshibai");
             returnFail(); // 查询失败
             return ;
         }
@@ -90,9 +100,10 @@ public class RegisterServlet extends HttpServlet{
         String res = postData.getData(url,nameValuePair);
         out.println(res);
         //获取token 存储
+        String token = getJSONToken(res); 
         sql = "update User set token=? where username=?";
         OperDataBase.init("FunnyChat",sql);
-        OperDataBase.addSQLData(1,res);
+        OperDataBase.addSQLData(1,token);
         OperDataBase.addSQLData(2,username);
         if(OperDataBase.exeSQL() == -2){
             out.println("endcharursdf");
