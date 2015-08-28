@@ -22,5 +22,14 @@
                <servlet-name>login</servlet-name>
                <url-pattern>/login</url-pattern>
            </servlet-mapping>
+           <!--建群-->
+           <servlet>
+               <servlet-name>createGroup</servlet-name>
+               <servlet-class>Servlet.CreateGroupServlet</servlet-class> 
+           </servlet> 
+           <servlet-mapping>
+               <servlet-name>createGroup</servlet-name>
+               <url-pattern>/createGroup</url-pattern> 
+           </servlet-mapping> 
 </web-app>
 

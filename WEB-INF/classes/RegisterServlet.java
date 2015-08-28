@@ -98,7 +98,7 @@ public class RegisterServlet extends HttpServlet{
         nameValuePair.add(new BasicNameValuePair("userId",userId));
         nameValuePair.add(new BasicNameValuePair("name",nickname));
         String res = postData.getData(url,nameValuePair);
-        out.println(res);
+        out.print(res);
         //获取token 存储
         String token = getJSONToken(res); 
         sql = "update User set token=? where username=?";
