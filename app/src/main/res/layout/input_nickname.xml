@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/layout_username_input"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    >
+    <TextView
+        android:text="@string/text_nickname"
+        android:textColor="@color/ColorTextPrimary"
+        android:textSize="@dimen/size_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:typeface="monospace"
+        />
+    <EditText
+        android:id="@+id/et_nickname"
+        android:hint="@string/hint_input_nickname"
+        android:layout_weight="1"
+        android:layout_width="@dimen/width_inputbox"
+        android:layout_height="wrap_content"
+        android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        />
+</LinearLayout>

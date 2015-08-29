@@ -1,0 +1,13 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorPrimary">@color/ColorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/ColorPrimaryDark</item>
+        <item name="android:textColor">@color/ColorText</item>
+        <item name="android:textColorPrimary">@color/ColorTextPrimary</item>
+        <item name="android:textColorSecondary">@color/ColorTextSecondary</item>
+        <item name="android:colorAccent">@color/ColorAccent</item>
+        <item name="divider">@color/ColorDivider</item>
+    </style>
+
+</resources>
