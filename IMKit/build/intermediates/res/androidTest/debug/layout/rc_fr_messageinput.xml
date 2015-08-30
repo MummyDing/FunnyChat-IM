@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<io.rong.imkit.widget.InputView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rc_input"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    app:style="SCE" /><!-- From: file:/media/mummyding/编程资料/源码/Android/MyApp/FunnyChat/IMKit/src/main/res/layout/rc_fr_messageinput.xml --><!-- From: file:/media/mummyding/编程资料/源码/Android/MyApp/FunnyChat/IMKit/build/intermediates/bundles/debug/res/layout/rc_fr_messageinput.xml -->

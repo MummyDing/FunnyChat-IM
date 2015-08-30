@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/media/mummyding/编程资料/源码/Android/MyApp/FunnyChat/IMKit/src/main/res/values/rc_emoji.xml -->
+    <eat-comment/>
+    <integer-array name="emoji_code">
+            <item>0x1f60a</item>
+            <item>0x1f628</item>
+            <item>0x1f60d</item>
+            <item>0x1f633</item>
+            <item>0x1f60e</item>
+            <item>0x1f62d</item>
+            <item>0x1f60c</item>
+            <item>0x1f635</item>
+            <item>0x1f634</item>
+            <item>0x1f622</item>
+            <item>0x1f605</item>
+            <item>0x1f621</item>
+            <item>0x1f61c</item>
+            <item>0x1f600</item>
+            <item>0x1f632</item>
+            <item>0x1f61f</item>
+            <item>0x1f624</item>
+            <item>0x1f61e</item>
+            <item>0x1f62b</item>
+            <item>0x1f623</item>
+            <item>0x1f608</item>
+            <item>0x1f609</item>
+            <item>0x1f62f</item>
+            <item>0x1f615</item>
+            <item>0x1f630</item>
+            <item>0x1f60b</item>
+            <item>0x1f61d</item>
+            <item>0x1f613</item>
+            <item>0x1f603</item>
+            <item>0x1f602</item>
+            <item>0x1f618</item>
+            <item>0x1f612</item>
+            <item>0x1f60f</item>
+            <item>0x1f636</item>
+            <item>0x1f631</item>
+            <item>0x1f616</item>
+            <item>0x1f629</item>
+            <item>0x1f614</item>
+            <item>0x1f611</item>
+            <item>0x1f61a</item>
+            <item>0x1f62a</item>
+            <item>0x1f607</item>
+            <item>0x1f64a</item>
+            <item>0x1f44a</item>
+            <item>0x1f44e</item>
+            <item>0x261d</item>
+            <item>0x270c</item>
+            <item>0x1f62c</item>
+            <item>0x1f637</item>
+            <item>0x1f648</item>
+            <item>0x1f44c</item>
+            <item>0x1f44f</item>
+            <item>0x270a</item>
+            <item>0x1f4aa</item>
+            <item>0x1f606</item>
+            <item>0x263a</item>
+            <item>0x1f649</item>
+            <item>0x1f44d</item>
+            <item>0x1f64f</item>
+            <item>0x270b</item>
+            <item>0x2600</item>
+            <item>0x2615</item>
+            <item>0x26c4</item>
+            <item>0x1f4da</item>
+            <item>0x1f381</item>
+            <item>0x1f389</item>
+            <item>0x1f366</item>
+            <item>0x2601</item>
+            <item>0x2744</item>
+            <item>0x26a1</item>
+            <item>0x1f4b0</item>
+            <item>0x1f382</item>
+            <item>0x1f393</item>
+            <item>0x1f356</item>
+            <item>0x2614</item>
+            <item>0x26c5</item>
+            <item>0x270f</item>
+            <item>0x1f4a9</item>
+            <item>0x1f384</item>
+            <item>0x1f377</item>
+            <item>0x1f3a4</item>
+            <item>0x1f3c0</item>
+            <item>0x1f004</item>
+            <item>0x1f4a3</item>
+            <item>0x1f4e2</item>
+            <item>0x1f30f</item>
+            <item>0x1f36b</item>
+            <item>0x1f3b2</item>
+            <item>0x1f3c2</item>
+            <item>0x1f4a1</item>
+            <item>0x1f4a4</item>
+            <item>0x1f6ab</item>
+            <item>0x1f33b</item>
+            <item>0x1f37b</item>
+            <item>0x1f3b5</item>
+            <item>0x1f3e1</item>
+            <item>0x1f4a2</item>
+            <item>0x1f4de</item>
+            <item>0x1f6bf</item>
+            <item>0x1f35a</item>
+            <item>0x1f46a</item>
+            <item>0x1f47c</item>
+            <item>0x1f48a</item>
+            <item>0x1f52b</item>
+            <item>0x1f339</item>
+            <item>0x1f436</item>
+            <item>0x1f484</item>
+            <item>0x1f46b</item>
+            <item>0x1f47d</item>
+            <item>0x1f48b</item>
+            <item>0x1f319</item>
+            <item>0x1f349</item>
+            <item>0x1f437</item>
+            <item>0x1f494</item>
+            <item>0x1f47b</item>
+            <item>0x1f47f</item>
+            <item>0x1f48d</item>
+            <item>0x1f332</item>
+            <item>0x1f434</item>
+            <item>0x1f451</item>
+            <item>0x1f525</item>
+            <item>0x2b50</item>
+            <item>0x26bd</item>
+            <item>0x1f556</item>
+            <item>0x23f0</item>
+            <item>0x1f601</item>
+            <item>0x1f680</item>
+            <item>0x23f3</item>
+        </integer-array>
+    <array name="emoji_res">
+        <item>@drawable/u1f60a</item>
+        <item>@drawable/u1f628</item>
+        <item>@drawable/u1f60d</item>
+        <item>@drawable/u1f633</item>
+        <item>@drawable/u1f60e</item>
+        <item>@drawable/u1f62d</item>
+        <item>@drawable/u1f60c</item>
+        <item>@drawable/u1f635</item>
+        <item>@drawable/u1f634</item>
+        <item>@drawable/u1f622</item>
+        <item>@drawable/u1f605</item>
+        <item>@drawable/u1f621</item>
+        <item>@drawable/u1f61c</item>
+        <item>@drawable/u1f600</item>
+        <item>@drawable/u1f632</item>
+        <item>@drawable/u1f61f</item>
+        <item>@drawable/u1f624</item>
+        <item>@drawable/u1f61e</item>
+        <item>@drawable/u1f62b</item>
+        <item>@drawable/u1f623</item>
+        <item>@drawable/u1f608</item>
+        <item>@drawable/u1f609</item>
+        <item>@drawable/u1f62f</item>
+        <item>@drawable/u1f615</item>
+        <item>@drawable/u1f630</item>
+        <item>@drawable/u1f60b</item>
+        <item>@drawable/u1f61d</item>
+        <item>@drawable/u1f613</item>
+        <item>@drawable/u1f603</item>
+        <item>@drawable/u1f602</item>
+        <item>@drawable/u1f618</item>
+        <item>@drawable/u1f612</item>
+        <item>@drawable/u1f60f</item>
+        <item>@drawable/u1f636</item>
+        <item>@drawable/u1f631</item>
+        <item>@drawable/u1f616</item>
+        <item>@drawable/u1f629</item>
+        <item>@drawable/u1f614</item>
+        <item>@drawable/u1f611</item>
+        <item>@drawable/u1f61a</item>
+        <item>@drawable/u1f62a</item>
+        <item>@drawable/u1f607</item>
+        <item>@drawable/u1f64a</item>
+        <item>@drawable/u1f44a</item>
+        <item>@drawable/u1f44e</item>
+        <item>@drawable/u261d</item>
+        <item>@drawable/u270c</item>
+        <item>@drawable/u1f62c</item>
+        <item>@drawable/u1f637</item>
+        <item>@drawable/u1f648</item>
+        <item>@drawable/u1f44c</item>
+        <item>@drawable/u1f44f</item>
+        <item>@drawable/u270a</item>
+        <item>@drawable/u1f4aa</item>
+        <item>@drawable/u1f606</item>
+        <item>@drawable/u263a</item>
+        <item>@drawable/u1f649</item>
+        <item>@drawable/u1f44d</item>
+        <item>@drawable/u1f64f</item>
+        <item>@drawable/u270b</item>
+        <item>@drawable/u2600</item>
+        <item>@drawable/u2615</item>
+        <item>@drawable/u26c4</item>
+        <item>@drawable/u1f4da</item>
+        <item>@drawable/u1f381</item>
+        <item>@drawable/u1f389</item>
+        <item>@drawable/u1f366</item>
+        <item>@drawable/u2601</item>
+        <item>@drawable/u2744</item>
+        <item>@drawable/u26a1</item>
+        <item>@drawable/u1f4b0</item>
+        <item>@drawable/u1f382</item>
+        <item>@drawable/u1f393</item>
+        <item>@drawable/u1f356</item>
+        <item>@drawable/u2614</item>
+        <item>@drawable/u26c5</item>
+        <item>@drawable/u270f</item>
+        <item>@drawable/u1f4a9</item>
+        <item>@drawable/u1f384</item>
+        <item>@drawable/u1f377</item>
+        <item>@drawable/u1f3a4</item>
+        <item>@drawable/u1f3c0</item>
+        <item>@drawable/u1f004</item>
+        <item>@drawable/u1f4a3</item>
+        <item>@drawable/u1f4e2</item>
+        <item>@drawable/u1f30f</item>
+        <item>@drawable/u1f36b</item>
+        <item>@drawable/u1f3b2</item>
+        <item>@drawable/u1f3c2</item>
+        <item>@drawable/u1f4a1</item>
+        <item>@drawable/u1f4a4</item>
+        <item>@drawable/u1f6ab</item>
+        <item>@drawable/u1f33b</item>
+        <item>@drawable/u1f37b</item>
+        <item>@drawable/u1f3b5</item>
+        <item>@drawable/u1f3e1</item>
+        <item>@drawable/u1f4a2</item>
+        <item>@drawable/u1f4de</item>
+        <item>@drawable/u1f6bf</item>
+        <item>@drawable/u1f35a</item>
+        <item>@drawable/u1f46a</item>
+        <item>@drawable/u1f47c</item>
+        <item>@drawable/u1f48a</item>
+        <item>@drawable/u1f52b</item>
+        <item>@drawable/u1f339</item>
+        <item>@drawable/u1f436</item>
+        <item>@drawable/u1f484</item>
+        <item>@drawable/u1f46b</item>
+        <item>@drawable/u1f47d</item>
+        <item>@drawable/u1f48b</item>
+        <item>@drawable/u1f319</item>
+        <item>@drawable/u1f349</item>
+        <item>@drawable/u1f437</item>
+        <item>@drawable/u1f494</item>
+        <item>@drawable/u1f47b</item>
+        <item>@drawable/u1f47f</item>
+        <item>@drawable/u1f48d</item>
+        <item>@drawable/u1f332</item>
+        <item>@drawable/u1f434</item>
+        <item>@drawable/u1f451</item>
+        <item>@drawable/u1f525</item>
+        <item>@drawable/u2b50</item>
+        <item>@drawable/u26bd</item>
+        <item>@drawable/u1f556</item>
+        <item>@drawable/u23f0</item>
+        <item>@drawable/u1f601</item>
+        <item>@drawable/u1f680</item>
+        <item>@drawable/u23f3</item>
+    </array>
+    <!-- From: file:/media/mummyding/编程资料/源码/Android/MyApp/FunnyChat/IMKit/src/main/res/values/rc_config.xml -->
+    <eat-comment/>
+    <bool name="rc_is_show_warning_notification">true</bool>
+    <!-- From: file:/media/mummyding/编程资料/源码/Android/MyApp/FunnyChat/IMKit/src/main/res/values/rc_color.xml -->
+    <eat-comment/>
+    <color name="rc_conversation_top_bg">#f2faff</color>
+    <color name="rc_draft_color">#cb120f</color>
+    <color name="rc_input_bg">#F4F4F4</color>
+    <color name="rc_message_user_name">#838383</color>
+    <color name="rc_normal_bg">#EBEBEB</color>
+    <color name="rc_notice_normal">#F0fffbd4</color>
+    <color name="rc_notice_text">#999999</color>
+    <color name="rc_notice_warning">#F0ffd0c4</color>
+    <color name="rc_notification_bg">#D3D3D3</color>
+    <color name="rc_plugins_bg">#F8F8F8</color>
+    <color name="rc_text_color_primary">#353535</color>
+    <color name="rc_text_color_primary_inverse">@android:color/white</color>
+    <color name="rc_text_color_secondary">#999999</color>
+    <color name="rc_text_color_tertiary">#d7d7d7</color>
+    <color name="rc_text_voice">#7f7f7f</color>
+    <color name="rc_voice_color">#0195ff</color>
+    <declare-styleable name="AsyncImageView"><attr name="shape"><flag name="square" value="0"/><flag name="circle" value="1"/></attr><attr format="reference" name="defDrawable"/></declare-styleable>
+    <declare-styleable name="InputView"><attr name="style"><enum name="SCE" value="0x123"/><enum name="CES" value="0x231"/><enum name="ECS" value="0x321"/><enum name="CSE" value="0x213"/><enum name="SC" value="0x120"/><enum name="CS" value="0x21"/><enum name="EC" value="0x320"/><enum name="CE" value="0x023"/><enum name="C" value="0x020"/></attr></declare-styleable>
+    <declare-styleable name="RCCircleFlowIndicator"><attr format="color" name="RCActiveColor"/><attr format="color" name="RCInactiveColor"/><attr format="dimension" name="RCRadius"/><attr format="dimension" name="RCSpacing"/><attr format="boolean" name="RCCentered"/><attr format="integer" name="RCFadeOut"/><attr name="RCInactiveType"><flag name="RCStroke" value="0"/><flag name="RCFill" value="1"/></attr><attr name="RCActiveType"><flag name="RCStroke" value="0"/><flag name="RCFill" value="1"/></attr><attr format="boolean" name="RCSnap"/></declare-styleable>
+    <declare-styleable name="RCViewFlow"><attr format="integer" name="RCSideBuffer"/></declare-styleable>
+    <!-- From: file:/media/mummyding/编程资料/源码/Android/MyApp/FunnyChat/IMKit/src/main/res/values/rc_dimens.xml -->
+    <eat-comment/>
+    <dimen name="rc_conversation_item_data_size">14sp</dimen>
+    <dimen name="rc_conversation_item_name_size">16sp</dimen>
+    <dimen name="rc_message_send_status_image_size">17dp</dimen>
+    <!-- From: file:/media/mummyding/编程资料/源码/Android/MyApp/FunnyChat/IMKit/src/main/res/values/rc_ids.xml -->
+    <eat-comment/>
+    <item name="rc_actionbar" type="id"/>
+    <item name="rc_back" type="id"/>
+    <item name="rc_btn_cancel" type="id"/>
+    <item name="rc_btn_ok" type="id"/>
+    <item name="rc_checkbox" type="id"/>
+    <item name="rc_content" type="id"/>
+    <item name="rc_conversation_content" type="id"/>
+    <item name="rc_conversation_msg_block" type="id"/>
+    <item name="rc_conversation_time" type="id"/>
+    <item name="rc_conversation_title" type="id"/>
+    <item name="rc_fragment" type="id"/>
+    <item name="rc_frame" type="id"/>
+    <item name="rc_icon" type="id"/>
+    <item name="rc_img" type="id"/>
+    <item name="rc_input_extension" type="id"/>
+    <item name="rc_input_main" type="id"/>
+    <item name="rc_input_switch" type="id"/>
+    <item name="rc_item0" type="id"/>
+    <item name="rc_item1" type="id"/>
+    <item name="rc_item2" type="id"/>
+    <item name="rc_item3" type="id"/>
+    <item name="rc_item4" type="id"/>
+    <item name="rc_item5" type="id"/>
+    <item name="rc_item6" type="id"/>
+    <item name="rc_item7" type="id"/>
+    <item name="rc_item8" type="id"/>
+    <item name="rc_item9" type="id"/>
+    <item name="rc_item_conversation" type="id"/>
+    <item name="rc_layout" type="id"/>
+    <item name="rc_left" type="id"/>
+    <item name="rc_list" type="id"/>
+    <item name="rc_logo" type="id"/>
+    <item name="rc_message_send_failed" type="id"/>
+    <item name="rc_msg" type="id"/>
+    <item name="rc_new" type="id"/>
+    <item name="rc_pager" type="id"/>
+    <item name="rc_portrait" type="id"/>
+    <item name="rc_portrait_right" type="id"/>
+    <item name="rc_progress" type="id"/>
+    <item name="rc_right" type="id"/>
+    <item name="rc_send" type="id"/>
+    <item name="rc_time" type="id"/>
+    <item name="rc_title" type="id"/>
+    <item name="rc_title_layout" type="id"/>
+    <item name="rc_txt" type="id"/>
+    <item name="rc_unread_message" type="id"/>
+    <item name="rc_unread_message_right" type="id"/>
+    <item name="rc_warning" type="id"/>
+    <!-- From: file:/media/mummyding/编程资料/源码/Android/MyApp/FunnyChat/IMKit/src/main/res/values/rc_config.xml -->
+    <eat-comment/>
+    <integer name="rc_chatroom_first_pull_message_count">10</integer>
+    <!-- From: file:/media/mummyding/编程资料/源码/Android/MyApp/FunnyChat/IMKit/src/main/res/values/rc_string.xml -->
+    <eat-comment/>
+    <string name="rc_called_accept">对方接受了通话请求</string>
+    <string name="rc_called_is_calling">对方正在通话中</string>
+    <string name="rc_called_not_accept">对方未接听</string>
+    <string name="rc_called_on_hook">对方已挂机</string>
+    <string name="rc_dialog_cancel">取消</string>
+    <string name="rc_dialog_item_message_copy">复制消息</string>
+    <string name="rc_dialog_item_message_delete">删除消息</string>
+    <string name="rc_dialog_ok">确定</string>
+    <string name="rc_discussion_nt_msg_for_add">"%1$s 邀请了%2$s位成员加入了讨论组"</string>
+    <string name="rc_discussion_nt_msg_for_added">"%1$s 邀请 %2$s 加入了讨论组"</string>
+    <string name="rc_discussion_nt_msg_for_exit">"%1$s 退出了讨论组"</string>
+    <string name="rc_discussion_nt_msg_for_is_open_invite_close">"%1$s 关闭了成员邀请"</string>
+    <string name="rc_discussion_nt_msg_for_is_open_invite_open">"%1$s 开放了成员邀请"</string>
+    <string name="rc_discussion_nt_msg_for_removed">"你被 %1$s 移出了讨论组"</string>
+    <string name="rc_discussion_nt_msg_for_rename">"%1$s 修改讨论组名称为 %2$s"</string>
+    <string name="rc_discussion_nt_msg_for_who_removed">"%1$s 被 %2$s 移出了讨论组"</string>
+    <string name="rc_discussion_nt_msg_for_you">"你"</string>
+    <string name="rc_exit_calling">是否退出通话界面？</string>
+    <string name="rc_file_not_exist">文件不存在</string>
+    <string name="rc_group_List_operation_failure">操作失败</string>
+    <string name="rc_group_list_app_public_service">应用公众服务</string>
+    <string name="rc_group_list_default_discussion_name">"讨论组"</string>
+    <string name="rc_group_list_dialog_cancel_top">取消置顶</string>
+    <string name="rc_group_list_dialog_remove">从会话列表中移除</string>
+    <string name="rc_group_list_dialog_set_top">置顶该会话</string>
+    <string name="rc_group_list_empty_prompt">"暂无聊天信息"</string>
+    <string name="rc_group_list_my_chatroom">我的聊天室</string>
+    <string name="rc_group_list_my_customer_service">客服列表</string>
+    <string name="rc_group_list_my_discussion">我的讨论组</string>
+    <string name="rc_group_list_my_group">我的群组</string>
+    <string name="rc_group_list_my_private_conversation">我的私人会话</string>
+    <string name="rc_group_list_popup_cancel_top">取消置顶</string>
+    <string name="rc_group_list_popup_set_top">已置顶</string>
+    <string name="rc_group_list_public_service">公众服务</string>
+    <string name="rc_group_list_system_conversation">系统消息</string>
+    <string name="rc_info_not_in_chatroom">你不在该聊天室</string>
+    <string name="rc_info_not_in_discussion">你不在该讨论组</string>
+    <string name="rc_info_not_in_group">你不在该群</string>
+    <string name="rc_input_send">发送</string>
+    <string name="rc_input_voice">按住 说话</string>
+    <string name="rc_message_content_draft">[草稿]</string>
+    <string name="rc_message_content_image">[图片]</string>
+    <string name="rc_message_content_location">[位置]</string>
+    <string name="rc_message_content_rich_text">[图文]</string>
+    <string name="rc_message_content_voice">[语音]</string>
+    <string name="rc_message_unknown">当前版本暂不支持查看此消息</string>
+    <string name="rc_message_unread_count">"···"</string>
+    <string name="rc_name">融云</string>
+    <string name="rc_network_error">网络连接错误</string>
+    <string name="rc_network_exception">网络异常请稍后再试</string>
+    <string name="rc_network_is_busy">网络繁忙</string>
+    <string name="rc_notice_connecting">正在连接服务器</string>
+    <string name="rc_notice_create_discussion">正在创建讨论组</string>
+    <string name="rc_notice_create_discussion_fail">创建讨论组失败</string>
+    <string name="rc_notice_data_is_loading">数据加载中</string>
+    <string name="rc_notice_disconnect">无法连接到服务器</string>
+    <string name="rc_notice_download_fail">下载失败!</string>
+    <string name="rc_notice_enter_chatroom">进入聊天室</string>
+    <string name="rc_notice_input_conversation_error">会话尚未创建</string>
+    <string name="rc_notice_load_data_fail">获取数据失败</string>
+    <string name="rc_notice_network_unavailable">当前网络不可用</string>
+    <string name="rc_notice_select_one_picture_at_last">请至少选择一张图片</string>
+    <string name="rc_notice_tick">该账号已经在其他设备登录</string>
+    <string name="rc_notification_contact">个联系人</string>
+    <string name="rc_notification_msg">条消息</string>
+    <string name="rc_notification_send">发来了</string>
+    <string name="rc_notification_ticker_text">您有了一条新消息</string>
+    <string name="rc_plugins_camera">相机</string>
+    <string name="rc_plugins_image">图片</string>
+    <string name="rc_plugins_location">位置</string>
+    <string name="rc_plugins_voip">语音通话</string>
+    <string name="rc_pub_service_info_account">公众号：%1$s</string>
+    <string name="rc_pub_service_info_description">功能介绍</string>
+    <string name="rc_pub_service_info_enter">进入公众号</string>
+    <string name="rc_pub_service_info_follow">关注</string>
+    <string name="rc_pub_service_info_unfollow">取消关注</string>
+    <string name="rc_rejected_by_blacklist_prompt">您的消息已经发出，但被对方拒收</string>
+    <string name="rc_send_format">发送(%1$s)</string>
+    <string name="rc_setting_clear_msg_fail">清空聊天失败</string>
+    <string name="rc_setting_clear_msg_name">清空聊天信息</string>
+    <string name="rc_setting_clear_msg_prompt">你确定要清空聊天消息吗?</string>
+    <string name="rc_setting_clear_msg_success">清空聊天成功</string>
+    <string name="rc_setting_conversation_notify">新消息通知</string>
+    <string name="rc_setting_conversation_notify_fail">设置新消息通知失败</string>
+    <string name="rc_setting_get_conversation_notify_fail">获取新消息通知失败</string>
+    <string name="rc_setting_name">设置</string>
+    <string name="rc_setting_set_top">置顶</string>
+    <string name="rc_setting_set_top_fail">设置置顶失败</string>
+    <string name="rc_voice_cancel">松开手指，取消发送</string>
+    <string name="rc_voice_dialog_cancel_send">松开手指，取消发送</string>
+    <string name="rc_voice_dialog_swipe">手指上滑，取消发送</string>
+    <string name="rc_voice_dialog_time_short">说话时间太短</string>
+    <string name="rc_voice_failure">录音失败！</string>
+    <string name="rc_voice_rec">手指上滑，取消发送</string>
+    <string name="rc_voice_short">录音时间太短</string>
+    <string name="rc_waiting">等待中</string>
+    <string name="rc_yes">是</string>
+    <string name="rc_yesterday_format">昨天 %1$s</string>
+    <!-- From: file:/media/mummyding/编程资料/源码/Android/MyApp/FunnyChat/IMKit/src/main/res/values/rc_theme.xml -->
+    <eat-comment/>
+    <style name="RCTheme" parent="@android:style/Theme.Light">
+        <item name="android:listDivider">@android:color/transparent</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:textColorPrimary">@color/rc_text_color_primary</item>
+        <item name="android:textColorSecondary">@color/rc_text_color_secondary</item>
+        <item name="android:textColorTertiary">@color/rc_text_color_tertiary</item>
+        <item name="android:textColorPrimaryInverse">@color/rc_text_color_primary_inverse</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="RCTheme.Message.RichContent.TextView" parent="RCTheme.TextView">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/rc_text_color_secondary</item>
+    </style>
+    <style name="RCTheme.Message.TextView" parent="RCTheme.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/rc_text_color_primary</item>
+    </style>
+    <style name="RCTheme.Message.Username.TextView" parent="RCTheme.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/rc_message_user_name</item>
+        <item name="android:paddingLeft">8dp</item>
+    </style>
+    <style name="RCTheme.Notification" parent="RCTheme.TextView">
+        <item name="android:background">@color/rc_notification_bg</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingTop">7dp</item>
+        <item name="android:paddingBottom">7dp</item>
+        <item name="android:textColor">@color/rc_text_color_primary_inverse</item>
+    </style>
+    <style name="RCTheme.TextView" parent="android:Widget.TextView">
+
+    </style>
+    <style name="RCTheme.TextView.Large" parent="RCTheme.TextView">
+
+    </style>
+    <style name="RCTheme.TextView.Large.Inverse" parent="RCTheme.TextView.Large">
+        <item name="android:textColor">@color/rc_text_color_primary_inverse</item>
+    </style>
+    <style name="RCTheme.TextView.Medium" parent="RCTheme.TextView">
+
+    </style>
+    <style name="RCTheme.TextView.New" parent="RCTheme.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/rc_text_color_primary_inverse</item>
+        <item name="android:background">@drawable/rc_unread_count_bg</item>
+    </style>
+    <style name="RCTheme.TextView.Small" parent="RCTheme.TextView">
+
+    </style>
+    <style name="RcDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    <!-- From: file:/media/mummyding/编程资料/源码/Android/MyApp/FunnyChat/IMKit/src/main/res/values/rc_style.xml -->
+    <eat-comment/>
+    <style name="custom_checkbox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:background">@drawable/rc_photo_checkbox</item>
+    </style>
+    <style name="preview_checkbox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/rc_preview_checkbox</item>
+    </style>
+</resources>

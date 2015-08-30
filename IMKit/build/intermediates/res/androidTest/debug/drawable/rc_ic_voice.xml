@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/rc_ic_voice_selected" android:state_selected="true"/>
+    <item android:drawable="@drawable/rc_ic_voice_normal"/>
+</selector><!-- From: file:/media/mummyding/编程资料/源码/Android/MyApp/FunnyChat/IMKit/src/main/res/drawable/rc_ic_voice.xml --><!-- From: file:/media/mummyding/编程资料/源码/Android/MyApp/FunnyChat/IMKit/build/intermediates/bundles/debug/res/drawable/rc_ic_voice.xml -->

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:drawable="@drawable/rc_radio_button_on" />
+    <item android:drawable="@drawable/rc_radio_button_off" />
+</selector><!-- From: file:/media/mummyding/编程资料/源码/Android/MyApp/FunnyChat/IMKit/src/main/res/drawable/rc_switch_btn.xml --><!-- From: file:/media/mummyding/编程资料/源码/Android/MyApp/FunnyChat/IMKit/build/intermediates/bundles/debug/res/drawable/rc_switch_btn.xml -->

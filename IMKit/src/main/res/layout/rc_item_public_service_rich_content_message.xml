@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/rc_bg_item"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:textSize="20px"
+            android:id="@id/rc_title"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="20dp"
+            android:text="4月17日"
+            android:gravity="center_vertical"
+            android:id="@id/rc_time"/>
+
+        <io.rong.imkit.widget.AsyncImageView
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:scaleType="fitXY"
+            android:id="@id/rc_img"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:id="@id/rc_content"
+            android:text="description"/>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/rc_normal_bg"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:text="阅读全文"/>
+    </LinearLayout>
+
+
+</LinearLayout>

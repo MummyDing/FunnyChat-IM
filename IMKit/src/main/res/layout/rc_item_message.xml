@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:background="@android:color/transparent"
+                android:orientation="vertical">
+
+    <TextView
+        android:id="@id/rc_time"
+        style="@style/RCTheme.Notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="6dp"
+        />
+
+    <io.rong.imkit.widget.AsyncImageView
+        android:id="@id/rc_left"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/rc_time"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="4dp"
+        android:background="@android:color/transparent"
+        app:defDrawable="@drawable/rc_ic_def_msg_portrait"/>
+
+    <io.rong.imkit.widget.AsyncImageView
+        android:id="@id/rc_right"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/rc_time"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="4dp"
+        android:background="@android:color/transparent"
+        app:defDrawable="@drawable/rc_ic_def_msg_portrait"/>
+
+
+    <TextView
+        android:id="@id/rc_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rc_time"
+        android:layout_toLeftOf="@id/rc_right"
+        android:layout_toRightOf="@id/rc_left"
+        style="@style/RCTheme.Message.Username.TextView"
+        android:gravity="center_vertical"
+        android:layout_marginTop="-3dp"
+        android:visibility="gone"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rc_title"
+        android:layout_toLeftOf="@id/rc_right"
+        android:layout_toRightOf="@id/rc_left">
+
+        <LinearLayout
+            android:id="@id/rc_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@id/rc_progress"
+                android:layout_gravity="center_vertical"
+                android:layout_width="10dp"
+                android:layout_height="10dp"/>
+
+            <ImageView
+                android:id="@id/rc_warning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/rc_ic_warning"
+                android:visibility="gone"/>
+
+            <io.rong.imkit.widget.ProviderContainerView
+                android:id="@id/rc_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</RelativeLayout>

@@ -3,6 +3,7 @@
     package="com.mummyding.app.funnychat" >
 
     <application
+        android:name=".Application.App"
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/rc_msg"
+    style="@style/RCTheme.Notification"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:autoLink="all" />
+
+<!-- From: file:/media/mummyding/编程资料/源码/Android/MyApp/FunnyChat/IMKit/src/main/res/layout/rc_item_information_notification_message.xml --><!-- From: file:/media/mummyding/编程资料/源码/Android/MyApp/FunnyChat/IMKit/build/intermediates/bundles/debug/res/layout/rc_item_information_notification_message.xml -->
