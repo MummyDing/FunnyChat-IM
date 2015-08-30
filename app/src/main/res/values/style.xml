@@ -8,6 +8,7 @@
         <item name="android:textColorSecondary">@color/ColorTextSecondary</item>
         <item name="android:colorAccent">@color/ColorAccent</item>
         <item name="divider">@color/ColorDivider</item>
+        <item name="android:windowActionBar">false</item>
     </style>
 
 </resources>

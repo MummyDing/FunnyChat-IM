@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/menu_conversation"
+            android:checked="false"
+            android:icon="@mipmap/chat"
+            android:title="@string/text_chat" />
+        <item
+            android:id="@+id/menu_contact"
+            android:checked="false"
+            android:icon="@mipmap/contact"
+            android:title="@string/text_contact" />
+    </group>
+</menu>

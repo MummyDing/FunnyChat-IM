@@ -16,4 +16,12 @@
     <string name="hint_input_nickname">请输入昵称</string>
     <string name="hint_repassword">请确认密码</string>
     <string name="text_register">注 册</string>
+    <string name="title_activity_main">MainActivity</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_chat">会话</string>
+    <string name="text_contact">关系</string>
+    <string name="openDrawer">open</string>
+    <string name="closeDrawer">close</string>
 </resources>

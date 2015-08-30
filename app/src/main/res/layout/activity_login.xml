@@ -28,6 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"></include>
     <Button
+        android:id="@+id/btn_login"
         android:text="@string/text_login"
         android:textSize="@dimen/size_text"
         android:textColor="@color/ColorText"
@@ -36,13 +37,17 @@
         android:layout_marginTop="30dp"
         android:layout_width="@dimen/width_btn"
         android:layout_height="@dimen/height_btn" />
-    <TextView
-        android:id="@+id/tv_newUser"
-        android:layout_marginTop="100dp"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/text_newuser"
-        android:textSize="@dimen/size_textSecondary"
-        android:textColor="@color/ColorPrimary"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+
+
+    <ImageButton
+        android:id="@+id/imgbtn_newUser"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/register"
+        android:background="@drawable/circle"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="right|bottom" />
+
 </LinearLayout>

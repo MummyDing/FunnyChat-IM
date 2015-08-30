@@ -7,13 +7,16 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.mummyding.app.funnychat.R;
 
 public class LoginActivity extends ActionBarActivity implements View.OnClickListener{
     private Toolbar toolbar;
-    private TextView newUser;
+    private ImageButton newUser;
+    private Button loginBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,14 +27,26 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
         initView();
     }
     void initView(){
-        newUser = (TextView) findViewById(R.id.tv_newUser);
+        newUser = (ImageButton) findViewById(R.id.imgbtn_newUser);
+        loginBtn = (Button) findViewById(R.id.btn_login);
         newUser.setOnClickListener(this);
+        loginBtn.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(LoginActivity.this,RegisterActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
+        switch (v.getId()){
+            case R.id.btn_login:
+                Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                break;
+            case R.id.imgbtn_newUser:
+                intent = new Intent(LoginActivity.this,RegisterActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                break;
+        }
+
     }
 }

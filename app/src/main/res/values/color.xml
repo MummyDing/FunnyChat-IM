@@ -8,4 +8,5 @@
     <color name="ColorTextPrimary">#212121</color>
     <color name="ColorTextSecondary">#727272</color>
     <color name="ColorDivider">#B6B6B6</color>
+    <color name="tabsScrollColor">#00BCD4</color>
 </resources>
