@@ -42,8 +42,6 @@ public class RegisterServlet extends HttpServlet{
         String username =  request.getParameter("username");
         String nickname =  request.getParameter("nickname");
         String password =  request.getParameter("password");
-        out.println(username);
-        out.println(password);
         /*
          *查询数据库
          * */
