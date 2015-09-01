@@ -24,4 +24,7 @@
     <string name="text_contact">关系</string>
     <string name="openDrawer">open</string>
     <string name="closeDrawer">close</string>
+    <string name="text_setting">设置</string>
+    <string name="text_notification">通知</string>
+    <string name="text_about">关于</string>
 </resources>

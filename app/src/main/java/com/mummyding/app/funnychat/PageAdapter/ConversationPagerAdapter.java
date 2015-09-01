@@ -2,8 +2,7 @@ package com.mummyding.app.funnychat.PageAdapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-
-import com.mummyding.app.funnychat.TabFragment.FriendsChatFragment;
+import io.rong.imkit.fragment.ConversationListFragment;
 import com.mummyding.app.funnychat.TabFragment.GroupsChatFragment;
 
 /**
@@ -20,13 +19,13 @@ public class ConversationPagerAdapter extends BasePagerAdapter {
          */
         if(position == 0)
         {
-            FriendsChatFragment friendsChatFragment = new FriendsChatFragment();
-            return friendsChatFragment;
+            ConversationListFragment listFragment = new ConversationListFragment();
+            return listFragment;
         }
         else
         {
-            GroupsChatFragment groupsChatFragment = new GroupsChatFragment();
-            return groupsChatFragment;
+            ConversationListFragment listFragment = new ConversationListFragment();
+            return listFragment;
         }
 
     }

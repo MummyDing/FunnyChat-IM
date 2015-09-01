@@ -12,5 +12,21 @@
             android:checked="false"
             android:icon="@mipmap/contact"
             android:title="@string/text_contact" />
+        <item
+            android:id="@+id/menu_notification"
+            android:checked="false"
+            android:icon="@mipmap/notification"
+            android:title="@string/text_notification" />
+        <item
+            android:id="@+id/menu_setting"
+            android:checked="false"
+            android:icon="@mipmap/setting"
+            android:title="@string/text_setting" />
+        <item
+            android:id="@+id/menu_about"
+            android:checked="false"
+            android:icon="@mipmap/about"
+            android:title="@string/text_about" />
+
     </group>
 </menu>
