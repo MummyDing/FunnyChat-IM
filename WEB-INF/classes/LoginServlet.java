@@ -29,6 +29,8 @@ public class LoginServlet extends HttpServlet{
        try{
        if(rs.next()){
            out.print(rs.getString("token"));
+       }else{
+           out.print("404");
        }
        }catch(Exception e){
            out.print("404");
