@@ -41,7 +41,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data
-                    android:host="io.rong.imkit"
+                    android:host="com.mummyding.app.funnychat"
                     android:pathPrefix="/VoIPCall"
                     android:scheme="rong" />
             </intent-filter>
@@ -56,7 +56,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
 
                 <data
-                    android:host="io.rong.imkit"
+                    android:host="com.mummyding.app.funnychat"
                     android:pathPrefix="/VoIPAccept"
                     android:scheme="rong" />
             </intent-filter>
@@ -137,7 +137,7 @@
 
         <meta-data
             android:name="RONG_CLOUD_APP_KEY"
-            android:value="此处添加APP_KEY" />
+            android:value="lmxuhwagxyc8d" />
     </application>
 
 </manifest>

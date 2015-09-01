@@ -19,6 +19,8 @@
         android:layout_weight="1"
         android:layout_width="@dimen/width_inputbox"
         android:layout_height="wrap_content"
+        android:maxLength="16"
+        android:singleLine="true"
         android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
         />
 </LinearLayout>

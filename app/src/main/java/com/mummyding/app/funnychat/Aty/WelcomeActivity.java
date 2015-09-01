@@ -24,11 +24,11 @@ public class WelcomeActivity extends ActionBarActivity {
             @Override
             public boolean handleMessage(Message msg) {
                 Intent intent = new Intent(WelcomeActivity.this,LoginActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                finish();
                 startActivity(intent);
                 return true;
             }
         });
-        handler.sendEmptyMessageDelayed(0,1500);
+        handler.sendEmptyMessageDelayed(0,800);
     }
 }
