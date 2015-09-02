@@ -28,12 +28,12 @@ public class LoginServlet extends HttpServlet{
         * */
        try{
        if(rs.next()){
-           out.print(rs.getString("token"));
+           out.print("{\"code\":200,"+"\"token\":"+"\""+rs.getString("token")+"\""+",\"userId\":"+"\""+rs.getString("userId")+"\"}");
        }else{
-           out.print("404");
+           out.print("{\"code\":\"404\"}");
        }
        }catch(Exception e){
-           out.print("404");
+           out.print("{\"code\":\"404\"}");
        }
     }
     public void doGet(HttpServletRequest request,HttpServletResponse response)throws IOException,ServletException
