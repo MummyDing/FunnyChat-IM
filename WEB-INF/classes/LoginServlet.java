@@ -28,7 +28,7 @@ public class LoginServlet extends HttpServlet{
         * */
        try{
        if(rs.next()){
-           out.print("{\"code\":200,"+"\"token\":"+"\""+rs.getString("token")+"\""+",\"userId\":"+"\""+rs.getString("userId")+"\"}");
+           out.print("{\"code\":200,"+"\"token\":"+"\""+rs.getString("token")+"\""+",\"nickname\":"+"\""+rs.getString("nickname")+"\""+",\"userId\":"+"\""+rs.getString("userId")+"\"}");
        }else{
            out.print("{\"code\":\"404\"}");
        }
