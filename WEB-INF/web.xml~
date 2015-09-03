@@ -49,16 +49,6 @@
                <servlet-name>quitGroup</servlet-name>
                <url-pattern>/quitGroup</url-pattern> 
            </servlet-mapping>
-
-	   <!--添加联系人-->
-           <servlet>
-               <servlet-name>addContact</servlet-name>
-               <servlet-class>Servlet.AddContactServlet</servlet-class>
-           </servlet>
-           <servlet-mapping>
-               <servlet-name>addContact</servlet-name>
-               <url-pattern>/addContact</url-pattern>
-           </servlet-mapping> 
            <!--查询联系人-->
            <servlet>
                <servlet-name>queryContact</servlet-name>

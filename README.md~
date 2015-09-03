@@ -38,6 +38,8 @@ __基于Android的即时通讯应用[使用融云SDK]__
    --- | --- | ---
    `username` | String | *用户名(作为用户标识)*
    `password` | String | *密  码*
+   `nickname` | String | *昵  称*
+   `token` | String | *用户 token,用户请求服务器的凭证*
 
 *返回值*
 
