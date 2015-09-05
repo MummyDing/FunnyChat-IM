@@ -20,6 +20,8 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.params.CoreConnectionPNames;
+import org.apache.http.params.CoreProtocolPNames;
 import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
@@ -49,6 +51,8 @@ public class IntentHelper {
                     e.printStackTrace();
                 }
                 httpPost.setEntity(entity);
+                httpClient.getParams().setParameter(CoreConnectionPNames.CONNECTION_TIMEOUT, 3000);
+                httpClient.getParams().setParameter(CoreConnectionPNames.SO_TIMEOUT,3000);
                 try {
                     httpResponse = httpClient.execute(httpPost);
                 } catch (Exception e) {

@@ -1,19 +1,17 @@
 package com.mummyding.app.funnychat.Aty;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.NavigationView.OnNavigationItemSelectedListener;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mummyding.app.funnychat.PageAdapter.ContactPagerAdapter;
@@ -21,26 +19,27 @@ import com.mummyding.app.funnychat.PageAdapter.ConversationPagerAdapter;
 import com.mummyding.app.funnychat.PageAdapter.SettingPageAdapter;
 import com.mummyding.app.funnychat.R;
 import com.mummyding.app.funnychat.SlideTookit.SlidingTabLayout;
-import com.mummyding.app.funnychat.TabFragment.SettingFragment;
 import com.mummyding.app.funnychat.Tookit.DataHelper;
 
 import io.rong.imkit.RongIM;
 import io.rong.imlib.RongIMClient;
+import io.rong.imlib.model.UserInfo;
 
 public class MainActivity extends AppCompatActivity implements OnNavigationItemSelectedListener{
     private Toolbar toolbar;
+    private TextView tv_usernmae;
+    private TextView tv_nickname;
     private ViewPager pager;
     private ConversationPagerAdapter conversationPagerAdapter;
     private ContactPagerAdapter contactPagerAdapter;
     private SlidingTabLayout tabs;
-    private CharSequence conversationTitles[]={"好友","群"};
-    private final CharSequence contactTitles[]={"最近","所有"};
+    private CharSequence conversationTitles[]={"联系人","联系群"};
+    private final CharSequence contactTitles[]={"联系人","联系群"};
     private final CharSequence settingTitles[]={"设置"};
     private final int Numboftabs =2;
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
-    private FragmentTransaction fragmentTransaction;
     private SettingPageAdapter settingPageAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +55,8 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         pager = (ViewPager) findViewById(R.id.pager);
         tabs = (SlidingTabLayout) findViewById(R.id.tabs);
+        tv_usernmae = (TextView) findViewById(R.id.tv_username);
+        tv_nickname = (TextView) findViewById(R.id.tv_nickname);
         conversationPagerAdapter =  new ConversationPagerAdapter(getSupportFragmentManager(),conversationTitles,Numboftabs);
         contactPagerAdapter = new ContactPagerAdapter(getSupportFragmentManager(),contactTitles,Numboftabs);
         settingPageAdapter = new SettingPageAdapter(getSupportFragmentManager(),settingTitles,1);
@@ -96,6 +97,19 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
             @Override
             public void onSuccess(String s) {
                 Toast.makeText(MainActivity.this,"成功登陆",Toast.LENGTH_SHORT).show();
+                tv_usernmae.setText(DataHelper.getSharedData("username"));
+                tv_nickname.setText(DataHelper.getSharedData("nickname"));
+
+                /*
+                    设置用户信息
+                 */
+                RongIM.setUserInfoProvider(new RongIM.UserInfoProvider() {
+                    @Override
+                    public UserInfo getUserInfo(String s) {
+                        return new UserInfo(DataHelper.getSharedData("userId"),
+                                DataHelper.getSharedData("username"), Uri.parse("http://p2.gexing.com/touxiang/20120802/0922/5019d66eef7ed_200x200_3.jpg"));
+                    }
+                },true);
             }
             @Override
             public void onError(RongIMClient.ErrorCode errorCode) {
@@ -116,7 +130,6 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
                 pager.setAdapter(conversationPagerAdapter);
                 toolbar.setTitle("会话");
                 tabs.setViewPager(pager);
-
                 break;
             case R.id.menu_contact:
                 pager.setAdapter(contactPagerAdapter);

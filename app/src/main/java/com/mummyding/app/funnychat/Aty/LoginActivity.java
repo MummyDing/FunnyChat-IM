@@ -16,9 +16,12 @@ import android.widget.Toast;
 import com.mummyding.app.funnychat.R;
 import com.mummyding.app.funnychat.Tookit.DataHelper;
 import com.mummyding.app.funnychat.Tookit.IntentHelper;
+import com.mummyding.app.funnychat.Tookit.JSONHelper;
 import com.mummyding.app.funnychat.Tookit.ListHelper;
 import com.mummyding.app.funnychat.Value.MapHelper;
 import com.mummyding.app.funnychat.Value.Values;
+
+import org.json.JSONObject;
 
 public class LoginActivity extends ActionBarActivity implements View.OnClickListener{
     private Toolbar toolbar;
@@ -67,7 +70,8 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
                 /*
                     根据返回数据判断该用户是否存在
                  */
-                if(responseData.equals("404")){
+                JSONObject jsonObject = JSONHelper.getJSONObj(responseData);
+                if(JSONHelper.getObjString(jsonObject,"code").equals("404")){
                     Toast.makeText(this,"用户名或密码错误",Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -75,7 +79,10 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
                 /*
                  验证成功 保存token 进入主界面
                  */
-                DataHelper.putSharedData("token",responseData);
+                DataHelper.putSharedData("token",JSONHelper.getObjString(jsonObject,"token"));
+                DataHelper.putSharedData("userId",JSONHelper.getObjString(jsonObject,"userId"));
+                DataHelper.putSharedData("nickname",JSONHelper.getObjString(jsonObject,"nickname"));
+                DataHelper.putSharedData("username",username);
                 Intent intent = new Intent(LoginActivity.this,MainActivity.class);
                 finish();
                 startActivity(intent);

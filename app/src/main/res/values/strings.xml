@@ -27,4 +27,6 @@
     <string name="text_setting">设置</string>
     <string name="text_notification">通知</string>
     <string name="text_about">关于</string>
+    <string name="title_activity_private_conversation">PrivateConversationActivity</string>
+    <string name="title_activity_conversation">ConversationActivity</string>
 </resources>

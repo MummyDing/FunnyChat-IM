@@ -81,8 +81,8 @@ public class RegisterActivity extends ActionBarActivity  implements View.OnClick
                 /*
                   解析数据
                  */
-                JSONHelper.setJSON(responseData);
-                if(JSONHelper.getString("code").equals("404")){
+                JSONObject jsonObject = JSONHelper.getJSONObj(responseData);
+                if(JSONHelper.getObjString(jsonObject,"code").equals("404")){
                     Toast.makeText(this,"该用户名已被注册",Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(this,"注册成功!",Toast.LENGTH_SHORT).show();

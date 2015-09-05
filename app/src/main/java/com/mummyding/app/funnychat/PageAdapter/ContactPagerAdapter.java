@@ -4,9 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 
 import com.mummyding.app.funnychat.TabFragment.AllContactFragment;
-import com.mummyding.app.funnychat.TabFragment.FriendsChatFragment;
-import com.mummyding.app.funnychat.TabFragment.GroupsChatFragment;
-import com.mummyding.app.funnychat.TabFragment.RecentContactFragment;
+import com.mummyding.app.funnychat.TabFragment.AllGroupsFragment;
 
 /**
  * Created by mummyding on 15-8-30.
@@ -19,17 +17,18 @@ public class ContactPagerAdapter extends BasePagerAdapter {
     @Override
     public Fragment getItem(int position) {
         /*
-         *position 0 最近联系人 1表示所有联系人
+         *position 0 最近联系人 1表示所有联系群
          */
         if(position == 0)
         {
-            RecentContactFragment recentContactFragment = new RecentContactFragment();
-            return recentContactFragment;
+            AllContactFragment allContactFragment = new AllContactFragment();
+            return allContactFragment;
+
         }
         else
         {
-            AllContactFragment allContactFragment = new AllContactFragment();
-            return allContactFragment;
+            AllGroupsFragment allGroupsFragment = new AllGroupsFragment();
+            return allGroupsFragment;
         }
 
     }
