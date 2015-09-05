@@ -7,7 +7,7 @@ import java.sql.*;
 import Tookit.OperDataBase;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
-public class QueryContactServlet extends HttpServlet{
+public class QueryGroupRSServlet extends HttpServlet{
     PrintWriter out = null;
     public void doPost(HttpServletRequest request,HttpServletResponse response)throws IOException,ServletException
     {
@@ -19,7 +19,7 @@ public class QueryContactServlet extends HttpServlet{
        /*
         * 查询数据库
         * */
-       String sql = "select * from Contact where userId=?";
+       String sql = "select * from GroupRS where userId=?";
        OperDataBase.init("FunnyChat",sql);
        OperDataBase.addSQLData(1,userId);
        ResultSet rs = OperDataBase.exeGetDataSQL();
@@ -30,8 +30,8 @@ public class QueryContactServlet extends HttpServlet{
        try{
        while(rs.next()){
            JSONObject jsonObject = new JSONObject();
-           jsonObject.put("contactId",rs.getString("contactId"));
-           jsonObject.put("contactname",rs.getString("contactname"));
+           jsonObject.put("groupId",rs.getString("groupId"));
+           jsonObject.put("type",rs.getString("type"));
 	       jsonArray.add(jsonObject);
        }
        }catch(Exception e){

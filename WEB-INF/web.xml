@@ -68,5 +68,14 @@
                <servlet-name>queryContact</servlet-name>
                <url-pattern>/queryContact</url-pattern>
            </servlet-mapping> 
+	   <!--查询所属群-->
+           <servlet>
+               <servlet-name>queryGroupRS</servlet-name>
+               <servlet-class>Servlet.QueryGroupRSServlet</servlet-class>
+           </servlet>
+           <servlet-mapping>
+               <servlet-name>queryGroupRS</servlet-name>
+               <url-pattern>/queryGroupRS</url-pattern>
+           </servlet-mapping> 
 </web-app>
 

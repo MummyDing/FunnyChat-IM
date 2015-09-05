@@ -151,3 +151,22 @@ __基于Android的即时通讯应用[使用融云SDK]__
    `contactname` | String | *联系人用户名*
    
 *返回数据格式:*`json`
+***
+ 
+###7. **查询所属群** ###
+*方法名:* `queryGroupRS`<br>
+*URL:* [localhost:8080/funnychat/queryGroupRS]()  
+*`POST`参数:*
+
+   名称 | 类型 | 说明
+   --- | --- | ---
+   `userId` | String | *用户Id 标识用户身份*
+
+*返回值*
+
+   名称 | 类型 | 说明
+   --- | --- | ---
+   `groupId` | String | *群Id 群标识*
+   `type` | String | *群身份*
+   
+*返回数据格式:*`json`
