@@ -10,7 +10,11 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ActionMenuView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,7 +29,7 @@ import io.rong.imkit.RongIM;
 import io.rong.imlib.RongIMClient;
 import io.rong.imlib.model.UserInfo;
 
-public class MainActivity extends AppCompatActivity implements OnNavigationItemSelectedListener{
+public class MainActivity extends AppCompatActivity implements OnNavigationItemSelectedListener,Toolbar.OnMenuItemClickListener{
     private Toolbar toolbar;
     private TextView tv_usernmae;
     private TextView tv_nickname;
@@ -64,9 +68,15 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer);
         toolbar.setTitle("会话");
         setSupportActionBar(toolbar);
+
+
         pager.setAdapter(conversationPagerAdapter);
 
         tabs.setDistributeEvenly(true);
+        /*
+            设置菜单&导航Item响应
+         */
+        toolbar.setOnMenuItemClickListener(this);
         navigationView.setNavigationItemSelectedListener(this);
         tabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
             @Override
@@ -81,6 +91,19 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
 
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
+
+        /*
+            显示用户名&昵称
+         */
+        tv_usernmae.setText(DataHelper.getSharedData("username"));
+        tv_nickname.setText(DataHelper.getSharedData("nickname"));
+          /*
+             刷新用户信息
+          */
+        RongIM.getInstance().refreshUserInfoCache(new UserInfo(DataHelper.getSharedData("userId"),
+                DataHelper.getSharedData("username"), Uri.parse("http://p2.gexing.com/touxiang/20120802/0922/5019d66eef7ed_200x200_3.jpg")));
+
+
     }
     private void exitLogin(){
         Intent intent = new Intent(MainActivity.this,LoginActivity.class);
@@ -97,19 +120,7 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
             @Override
             public void onSuccess(String s) {
                 Toast.makeText(MainActivity.this,"成功登陆",Toast.LENGTH_SHORT).show();
-                tv_usernmae.setText(DataHelper.getSharedData("username"));
-                tv_nickname.setText(DataHelper.getSharedData("nickname"));
 
-                /*
-                    设置用户信息
-                 */
-                RongIM.setUserInfoProvider(new RongIM.UserInfoProvider() {
-                    @Override
-                    public UserInfo getUserInfo(String s) {
-                        return new UserInfo(DataHelper.getSharedData("userId"),
-                                DataHelper.getSharedData("username"), Uri.parse("http://p2.gexing.com/touxiang/20120802/0922/5019d66eef7ed_200x200_3.jpg"));
-                    }
-                },true);
             }
             @Override
             public void onError(RongIMClient.ErrorCode errorCode) {
@@ -143,5 +154,29 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
                 break;
         }
         return false;
+    }
+
+
+    @Override
+    public boolean onMenuItemClick(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.action_add:
+                Intent intent = new Intent(this,AddActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.action_notify:
+                break;
+            case R.id.action_settings:
+                Toast.makeText(MainActivity.this,"setting",Toast.LENGTH_SHORT).show();
+                break;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 }

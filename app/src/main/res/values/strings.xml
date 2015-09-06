@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">FunnyChat</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">设置</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="text_username">账 号 </string>
     <string name="hint_input_username">请输入账号</string>
@@ -29,4 +29,11 @@
     <string name="text_about">关于</string>
     <string name="title_activity_private_conversation">PrivateConversationActivity</string>
     <string name="title_activity_conversation">ConversationActivity</string>
+    <string name="action_add">添加</string>
+    <string name="action_notify">通知</string>
+    <string name="title_activity_add">AddActivity</string>
+    <string name="hint_search_user">请输入对方用户名</string>
+    <string name="text_add_contact">添加联系人</string>
+    <string name="hint_search_group">请输入群ID</string>
+    <string name="text_add_group">加入联系群</string>
 </resources>

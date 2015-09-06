@@ -4,7 +4,7 @@ package com.mummyding.app.funnychat.Value;
  * Created by mummyding on 15-8-31.
  */
 public class Values {
-    private static String host = "http://10.100.1.162:8080/funnychat/";
+    private static String host = "http://10.100.3.234:8080/funnychat/";
     public static String registerURL=host+"register";
     public static String loginURL=host+"login";
     public static String createGroupURL=host+"createGroup";
@@ -12,4 +12,5 @@ public class Values {
     public static String quitGroupURL=host+"quitGroup";
     public static String queryContact = host+"queryContact";
     public static String addContact = host+"addContact";
+    public static String queryGroupRS=host+"queryGroupRS";
 }

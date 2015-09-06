@@ -3,6 +3,7 @@ package com.mummyding.app.funnychat.TabFragment;
 import android.content.Intent;
 import android.hardware.usb.UsbRequest;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -39,9 +40,10 @@ import io.rong.imlib.model.Conversation;
  */
 public class AllContactFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener,AdapterView.OnItemClickListener{
     private ListView all_listvew;
+    private SwipeRefreshLayout allContactContainer;
     private View parentView;
     private UserAdapter userAdapter;
-    List<UserItem> list;
+    private List<UserItem> list;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         parentView =inflater.inflate(R.layout.tab_all_contact,container,false);
@@ -51,9 +53,11 @@ public class AllContactFragment extends Fragment implements SwipeRefreshLayout.O
     private void init(){
         list = new ArrayList<UserItem>();
         all_listvew = (ListView) parentView.findViewById(R.id.all_Contact_listview);
+        allContactContainer = (SwipeRefreshLayout) parentView.findViewById(R.id.allContactContainer);
+        allContactContainer.setOnRefreshListener(this);
         all_listvew.setOnItemClickListener(this);
         getData();
-        userAdapter = new UserAdapter(getContext(),R.id.list_item,list);
+        userAdapter = new UserAdapter(getContext(),R.layout.useritem_view,list);
         all_listvew.setAdapter(userAdapter);
     }
 
@@ -76,7 +80,15 @@ public class AllContactFragment extends Fragment implements SwipeRefreshLayout.O
 
     @Override
     public void onRefresh() {
-
+        new Handler().post(new Runnable() {
+            @Override
+            public void run() {
+                list.clear();
+                getData();
+                userAdapter.notifyDataSetChanged();
+                allContactContainer.setRefreshing(false);
+            }
+        });
     }
 
     @Override

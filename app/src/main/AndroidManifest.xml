@@ -31,16 +31,21 @@
             android:name=".Aty.MainActivity"
             android:label="@string/title_activity_main" >
         </activity>
-        <activity android:name=".Aty.ConversationActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.VIEW" />
+        <activity android:name=".Aty.ConversationActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
 
-            <category android:name="android.intent.category.DEFAULT" />
-            <data
-            android:host="com.mummyding.app.funnychat"
-            android:pathPrefix="/conversation/"
-            android:scheme="rong" />
-        </intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.mummyding.app.funnychat"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Aty.AddActivity"
+            android:label="@string/title_activity_add" >
         </activity>
     </application>
 
