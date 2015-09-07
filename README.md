@@ -120,7 +120,7 @@ __基于Android的即时通讯应用[使用融云SDK]__
 
    名称 | 类型 | 说明
    --- | --- | ---
-   `userId` | String | *用户Id 标识用户身份*
+   `contactname` | String | *联系人用户名*
    `contactId` | String | *联系人Id 群标识*
 
 *返回值*
