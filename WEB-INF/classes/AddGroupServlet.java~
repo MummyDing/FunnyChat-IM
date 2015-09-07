@@ -47,11 +47,11 @@ public class AddGroupServlet extends HttpServlet{
 	/*
 	* 查询是否已经添加,已经添加则返回错误代码
 	*/
-	sql = "select * from GroupRS where userId=? and groupId=?";
+	String sql = "select * from GroupRS where userId=? and groupId=?";
         OperDataBase.init("FunnyChat",sql);
 	OperDataBase.addSQLData(1,userId);
         OperDataBase.addSQLData(2,groupId);
-        rs =OperDataBase.exeGetDataSQL();
+        ResultSet rs =OperDataBase.exeGetDataSQL();
 	try{
             if(rs.next()==true){
             //返回错误代码 return;

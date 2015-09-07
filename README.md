@@ -170,3 +170,23 @@ __基于Android的即时通讯应用[使用融云SDK]__
    `type` | String | *群身份*
    
 *返回数据格式:*`json`
+***
+ 
+###8. **删除联系人** ###
+*方法名:* `deleteContact`<br>
+*URL:* [localhost:8080/funnychat/deleteContact]()  
+*`POST`参数:*
+
+   名称 | 类型 | 说明
+   --- | --- | ---
+   `userId` | String | *用户Id 标识用户身份*
+   `contactname` | String | *联系人用户名*
+
+*返回值*
+
+   名称 | 类型 | 说明
+   --- | --- | ---
+   `code` | String | *返回码,200为正常,404为错误*
+   
+   
+*返回数据格式:*`json`
