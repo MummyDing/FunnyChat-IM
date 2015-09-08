@@ -34,6 +34,9 @@
     <string name="title_activity_add">AddActivity</string>
     <string name="hint_search_user">请输入对方用户名</string>
     <string name="text_add_contact">添加联系人</string>
-    <string name="hint_search_group">请输入群ID</string>
+    <string name="hint_input_groupId">请输入群ID</string>
     <string name="text_add_group">加入联系群</string>
+    <string name="title_activity_create_group">CreateGroupActivity</string>
+    <string name="hint_limit">字母或数字(不超过16位)</string>
+    <string name="text_create">创建</string>
 </resources>

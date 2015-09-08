@@ -4,11 +4,11 @@
     tools:context="com.mummyding.app.funnychat.Aty.MainActivity">
     <item android:id="@+id/action_add" android:title="@string/action_add"
         android:icon="@mipmap/ic_add"
-        android:orderInCategory="90" app:showAsAction="ifRoom"/>
+        android:orderInCategory="90" app:showAsAction="always"/>
     <item android:id="@+id/action_notify" android:title="@string/action_notify"
         android:icon="@mipmap/ic_notify"
-        android:orderInCategory="90" app:showAsAction="ifRoom"/>
+        android:orderInCategory="90" app:showAsAction="always"/>
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:icon="@mipmap/ic_setting"
-        android:orderInCategory="100" app:showAsAction="ifRoom" />
+        android:orderInCategory="100" app:showAsAction="always" />
 </menu>

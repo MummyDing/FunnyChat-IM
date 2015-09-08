@@ -1,6 +1,7 @@
 package com.mummyding.app.funnychat.Aty;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -67,7 +68,10 @@ public class AddActivity extends ActionBarActivity implements View.OnClickListen
                 /*
                     获取数据失败
                  */
-                if(res == null) return;
+                if(res == null){
+                    Toast.makeText(AddActivity.this, "获取网路数据失败,请检查网络设置", Toast.LENGTH_SHORT).show();
+                    return ;
+                }
                 JSONObject jsonObject = JSONHelper.getJSONObj(res);
                 if(JSONHelper.getObjString(jsonObject,"code").equals("200")){
                     Toast.makeText(AddActivity.this,"添加成功!",Toast.LENGTH_SHORT).show();
@@ -98,6 +102,8 @@ public class AddActivity extends ActionBarActivity implements View.OnClickListen
                 }
                 break;
             case R.id.imgbtn_createGroup:
+                Intent intent = new Intent(AddActivity.this,CreateGroupActivity.class);
+                startActivity(intent);
                 break;
         }
     }

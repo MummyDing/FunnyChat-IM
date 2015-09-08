@@ -43,7 +43,7 @@
         >
         <EditText
             android:id="@+id/et_groupId"
-            android:hint="@string/hint_search_group"
+            android:hint="@string/hint_input_groupId"
             android:layout_weight="1"
             android:layout_width="@dimen/width_inputbox"
             android:layout_height="wrap_content"
