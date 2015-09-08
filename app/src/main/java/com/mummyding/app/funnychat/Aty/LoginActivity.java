@@ -68,6 +68,13 @@ public class LoginActivity extends ActionBarActivity implements View.OnClickList
                 ListHelper.clearData();
 
                 /*
+                    获取数据失败
+                 */
+                if(responseData == null){
+                    Toast.makeText(LoginActivity.this, "获取网路数据失败,请检查网络设置", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                /*
                     根据返回数据判断该用户是否存在
                  */
                 JSONObject jsonObject = JSONHelper.getJSONObj(responseData);

@@ -79,6 +79,13 @@ public class RegisterActivity extends ActionBarActivity  implements View.OnClick
                 String responseData =IntentHelper.getData(Values.registerURL, ListHelper.getList());
                 ListHelper.clearData();
                 /*
+                    获取数据失败
+                 */
+                if(responseData == null) {
+                    Toast.makeText(RegisterActivity.this, "获取网路数据失败,请检查网络设置", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                /*
                   解析数据
                  */
                 JSONObject jsonObject = JSONHelper.getJSONObj(responseData);

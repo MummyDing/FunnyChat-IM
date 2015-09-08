@@ -38,9 +38,10 @@ public class IntentHelper {
     private static HttpClient httpClient = new DefaultHttpClient();
     private static HttpPost httpPost;
     private static HttpResponse httpResponse;
-    private static String res;
+    private static String res = null;
 
     public static String getData(final String url, final List<NameValuePair> valuePairs){
+        res = null;
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -50,23 +51,23 @@ public class IntentHelper {
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
                 }
-                httpPost.setEntity(entity);
-                httpClient.getParams().setParameter(CoreConnectionPNames.CONNECTION_TIMEOUT, 3000);
-                httpClient.getParams().setParameter(CoreConnectionPNames.SO_TIMEOUT,3000);
                 try {
-                    httpResponse = httpClient.execute(httpPost);
+                       httpPost.setEntity(entity);
+                       httpClient.getParams().setParameter(CoreConnectionPNames.CONNECTION_TIMEOUT, 3000);
+                       httpClient.getParams().setParameter(CoreConnectionPNames.SO_TIMEOUT,3000);
+                       httpResponse = httpClient.execute(httpPost);
+                    if(httpResponse.getStatusLine().getStatusCode() == 200){
+                        HttpEntity httpEntity = httpResponse.getEntity();
+                        try {
+                            res = EntityUtils.toString(httpEntity,"utf-8");
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
                 } catch (Exception e) {
                     e.printStackTrace();
-                    Log.e("err",e.toString());
                 }
-                if(httpResponse.getStatusLine().getStatusCode() == 200){
-                    HttpEntity httpEntity = httpResponse.getEntity();
-                    try {
-                        res = EntityUtils.toString(httpEntity,"utf-8");
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
+
             }
         });
         thread.start();

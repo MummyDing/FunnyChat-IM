@@ -1,16 +1,28 @@
 package com.mummyding.app.funnychat.Aty;
 
+import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.mummyding.app.funnychat.R;
+import com.mummyding.app.funnychat.Tookit.DataHelper;
+import com.mummyding.app.funnychat.Tookit.IntentHelper;
+import com.mummyding.app.funnychat.Tookit.JSONHelper;
+import com.mummyding.app.funnychat.Tookit.ListHelper;
+import com.mummyding.app.funnychat.Value.Values;
+
+import org.json.JSONObject;
+
+import javax.crypto.spec.DHGenParameterSpec;
 
 public class AddActivity extends ActionBarActivity implements View.OnClickListener {
     private Toolbar toolbar;
@@ -42,10 +54,48 @@ public class AddActivity extends ActionBarActivity implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
+        InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         switch (v.getId()){
             case R.id.btn_add_contact:
+                //隐藏软键盘
+                inputMethodManager.hideSoftInputFromWindow(et_username.getWindowToken(),0);
+                String contactname = DataHelper.getInputString(et_username);
+                ListHelper.addData("userId",DataHelper.getSharedData("userId"));
+                ListHelper.addData("contactname", contactname);
+                String res = IntentHelper.getData(Values.addContact, ListHelper.getList());
+                ListHelper.clearData();
+                /*
+                    获取数据失败
+                 */
+                if(res == null) return;
+                JSONObject jsonObject = JSONHelper.getJSONObj(res);
+                if(JSONHelper.getObjString(jsonObject,"code").equals("200")){
+                    Toast.makeText(AddActivity.this,"添加成功!",Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(AddActivity.this,"失败:用户名错误或已添加!",Toast.LENGTH_SHORT).show();
+                }
                 break;
             case R.id.btn_addGroup:
+                //隐藏软键盘
+                inputMethodManager.hideSoftInputFromWindow(et_groupId.getWindowToken(),0);
+                String groupId = DataHelper.getInputString(et_groupId);
+                ListHelper.addData("userId",DataHelper.getSharedData("userId"));
+                ListHelper.addData("groupId", groupId);
+                res = IntentHelper.getData(Values.addGroupURL, ListHelper.getList());
+                ListHelper.clearData();
+                /*
+                    获取数据失败
+                 */
+                if(res == null) {
+                    Toast.makeText(AddActivity.this, "获取网路数据失败,请检查网络设置", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                 jsonObject = JSONHelper.getJSONObj(res);
+                if(JSONHelper.getObjString(jsonObject,"code").equals("200")){
+                    Toast.makeText(AddActivity.this,"添加成功!",Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(AddActivity.this,"失败:群Id错误或已添加!",Toast.LENGTH_SHORT).show();
+                }
                 break;
             case R.id.imgbtn_createGroup:
                 break;
