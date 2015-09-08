@@ -51,6 +51,10 @@
             android:name=".Aty.CreateGroupActivity"
             android:label="@string/title_activity_create_group" >
         </activity>
+        <activity
+            android:name=".Aty.AboutActivity"
+            android:label="@string/title_activity_about" >
+        </activity>
     </application>
 
 </manifest>

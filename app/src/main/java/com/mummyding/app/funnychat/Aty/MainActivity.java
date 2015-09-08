@@ -148,9 +148,11 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
                 tabs.setViewPager(pager);
                 break;
             case R.id.menu_setting:
-                pager.setAdapter(settingPageAdapter);
-                toolbar.setTitle("设置");
-                tabs.setViewPager(pager);
+
+                break;
+            case R.id.menu_about:
+                Intent intent = new Intent(MainActivity.this,AboutActivity.class);
+                startActivity(intent);
                 break;
         }
         return false;

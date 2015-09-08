@@ -18,6 +18,7 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.mummyding.app.funnychat.Application.App;
 import com.mummyding.app.funnychat.Item.GroupItem;
 import com.mummyding.app.funnychat.Item.UserItem;
 import com.mummyding.app.funnychat.ListAdapter.GroupAdapter;
@@ -150,7 +151,7 @@ public class AllGroupsFragment extends Fragment implements SwipeRefreshLayout.On
                 获取数据失败
                 */
                 if(responseData == null) {
-                    Toast.makeText(getContext(), "获取网路数据失败,请检查网络设置", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(App.getAppContext(), "获取网路数据失败,请检查网络设置", Toast.LENGTH_SHORT).show();
                     return ;
                 }
                 JSONObject jsonObject = JSONHelper.getJSONObj(responseData);

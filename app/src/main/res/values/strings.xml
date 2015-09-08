@@ -39,4 +39,5 @@
     <string name="title_activity_create_group">CreateGroupActivity</string>
     <string name="hint_limit">字母或数字(不超过16位)</string>
     <string name="text_create">创建</string>
+    <string name="title_activity_about">AboutActivity</string>
 </resources>

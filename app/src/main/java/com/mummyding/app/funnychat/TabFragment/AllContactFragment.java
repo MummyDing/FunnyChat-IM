@@ -18,6 +18,7 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.mummyding.app.funnychat.Application.App;
 import com.mummyding.app.funnychat.Item.UserItem;
 import com.mummyding.app.funnychat.ListAdapter.UserAdapter;
 import com.mummyding.app.funnychat.R;
@@ -74,7 +75,7 @@ public class AllContactFragment extends Fragment implements SwipeRefreshLayout.O
                     获取数据失败
         */
         if(jsonData == null){
-            Toast.makeText(getContext(), "获取网路数据失败,请检查网络设置", Toast.LENGTH_SHORT).show();
+            Toast.makeText(App.getAppContext(), "获取网路数据失败,请检查网络设置", Toast.LENGTH_SHORT).show();
             return;
         }
         JSONArray jsonArray = JSONHelper.getJSONArray(jsonData);
