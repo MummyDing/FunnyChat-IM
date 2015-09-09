@@ -2,6 +2,7 @@ package com.mummyding.app.funnychat.Aty;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Handler;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.NavigationView.OnNavigationItemSelectedListener;
 import android.support.v4.view.ViewPager;
@@ -11,6 +12,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -45,6 +47,8 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
     private SettingPageAdapter settingPageAdapter;
+    private static boolean isExit = false;
+    private long exitTime = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -110,21 +114,23 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
         finish();
         startActivity(intent);
     }
-    private void linkRongCloud(){
+    private void linkRongCloud() {
         RongIM.connect(DataHelper.getSharedData("token"), new RongIMClient.ConnectCallback() {
             @Override
             public void onTokenIncorrect() {
-                Toast.makeText(MainActivity.this,"身份认证失败",Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "身份认证失败", Toast.LENGTH_SHORT).show();
                 exitLogin();
             }
+
             @Override
             public void onSuccess(String s) {
-                Toast.makeText(MainActivity.this,"成功登陆",Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "成功登陆", Toast.LENGTH_SHORT).show();
 
             }
+
             @Override
             public void onError(RongIMClient.ErrorCode errorCode) {
-                Toast.makeText(MainActivity.this,"连接服务器失败,请检查网络设置",Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "连接服务器失败,请检查网络设置", Toast.LENGTH_SHORT).show();
                 exitLogin();
             }
         });
@@ -147,11 +153,16 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
                 toolbar.setTitle("关系");
                 tabs.setViewPager(pager);
                 break;
+            case R.id.menu_notification:
+                Intent intent = new Intent(MainActivity.this,NotifyActivity.class);
+                startActivity(intent);
+                break;
             case R.id.menu_setting:
-
+                intent = new Intent(MainActivity.this,SettingActivity.class);
+                startActivity(intent);
                 break;
             case R.id.menu_about:
-                Intent intent = new Intent(MainActivity.this,AboutActivity.class);
+                intent = new Intent(MainActivity.this,AboutActivity.class);
                 startActivity(intent);
                 break;
         }
@@ -167,9 +178,12 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
                 startActivity(intent);
                 break;
             case R.id.action_notify:
+                intent = new Intent(MainActivity.this,NotifyActivity.class);
+                startActivity(intent);
                 break;
             case R.id.action_settings:
-                Toast.makeText(MainActivity.this,"setting",Toast.LENGTH_SHORT).show();
+                intent = new Intent(MainActivity.this,SettingActivity.class);
+                startActivity(intent);
                 break;
         }
         return false;
@@ -180,5 +194,26 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_main, menu);
         return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            exit();
+            return false;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    public void exit() {
+        if ((System.currentTimeMillis() - exitTime) > 2000) {
+            Toast.makeText(getApplicationContext(), "再按一次退出程序",
+                    Toast.LENGTH_SHORT).show();
+            exitTime = System.currentTimeMillis();
+        } else {
+            finish();
+            Intent intent = new Intent(MainActivity.this,LoginActivity.class);
+            startActivity(intent);
+        }
     }
 }

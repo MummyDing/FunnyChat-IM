@@ -55,6 +55,14 @@
             android:name=".Aty.AboutActivity"
             android:label="@string/title_activity_about" >
         </activity>
+        <activity
+            android:name=".Aty.SettingActivity"
+            android:label="@string/title_activity_setting" >
+        </activity>
+        <activity
+            android:name=".Aty.NotifyActivity"
+            android:label="@string/title_activity_notify" >
+        </activity>
     </application>
 
 </manifest>

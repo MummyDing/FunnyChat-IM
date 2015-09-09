@@ -23,6 +23,7 @@
         />
     <TextView
         android:text="Author: MummyDing"
+        android:textSize="15sp"
         android:textColor="@color/ColorPrimary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,6 +32,7 @@
         />
     <TextView
         android:text="Blog: blog.csdn.net/mummyding"
+        android:textSize="15sp"
         android:autoLink="all"
         android:textColor="@color/ColorPrimary"
         android:layout_width="wrap_content"
@@ -38,6 +40,7 @@
         android:layout_gravity="center_horizontal"/>
     <TextView
         android:text="email: MummyDing@outlook.com"
+        android:textSize="15sp"
         android:autoLink="all"
         android:textColor="@color/ColorPrimary"
         android:layout_width="wrap_content"
@@ -45,6 +48,7 @@
         android:layout_gravity="center"/>
     <TextView
         android:text="GitHub: github.com/MummyDing/"
+        android:textSize="15sp"
         android:autoLink="all"
         android:textColor="@color/ColorPrimary"
         android:layout_width="wrap_content"
