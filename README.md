@@ -5,10 +5,11 @@ __基于Android的即时通讯应用[使用融云SDK]__
 ***
 **Service服务端 API 接口说明**
 ***
+注:**host** 表示服务器地址
 ###1. *注册*###
 
 *方法名:* `register`<br>
-*URL:* [localhost:8080/funnychat/register]()  
+*URL:* [**host**/funnychat/register]()  
 *`POST`参数:*
 
    名称 | 类型 | 说明
@@ -31,7 +32,7 @@ __基于Android的即时通讯应用[使用融云SDK]__
 ###2.  *登陆*  ###
 
 *方法名:* `login`<br>
-*URL:* [localhost:8080/funnychat/login]()  
+*URL:* [**host**/funnychat/login]()  
 *`POST`参数:*
 
    名称 | 类型 | 说明
@@ -54,7 +55,7 @@ __基于Android的即时通讯应用[使用融云SDK]__
 ***
 ###3. *建群* ###
 *方法名:* `createGroup`<br>
-*URL:* [localhost:8080/funnychat/createGroup]()  
+*URL:* [**host**/funnychat/createGroup]()  
 *`POST`参数:*
 
    名称 | 类型 | 说明
@@ -74,7 +75,7 @@ __基于Android的即时通讯应用[使用融云SDK]__
 ***
 ###4. *加群* ###
 *方法名:* `addGroup`<br>
-*URL:* [localhost:8080/funnychat/addGroup]()  
+*URL:* [**host**/funnychat/addGroup]()  
 *`POST`参数:*
 
    名称 | 类型 | 说明
@@ -95,7 +96,7 @@ __基于Android的即时通讯应用[使用融云SDK]__
  
 ###5. **退群** ###
 *方法名:* `quitGroup`<br>
-*URL:* [localhost:8080/funnychat/quitGroup]()  
+*URL:* [**host**/funnychat/quitGroup]()  
 *`POST`参数:*
 
    名称 | 类型 | 说明
@@ -115,7 +116,7 @@ __基于Android的即时通讯应用[使用融云SDK]__
  
 ###6. **添加联系人** ###
 *方法名:* `addContact`<br>
-*URL:* [localhost:8080/funnychat/addContact]()  
+*URL:* [**host**/funnychat/addContact]()  
 *`POST`参数:*
 
    名称 | 类型 | 说明
@@ -136,7 +137,7 @@ __基于Android的即时通讯应用[使用融云SDK]__
  
 ###7. **查询联系人** ###
 *方法名:* `queryContact`<br>
-*URL:* [localhost:8080/funnychat/queryContact]()  
+*URL:* [**host**/funnychat/queryContact]()  
 *`POST`参数:*
 
    名称 | 类型 | 说明
@@ -155,7 +156,7 @@ __基于Android的即时通讯应用[使用融云SDK]__
  
 ###7. **查询所属群** ###
 *方法名:* `queryGroupRS`<br>
-*URL:* [localhost:8080/funnychat/queryGroupRS]()  
+*URL:* [**host**/funnychat/queryGroupRS]()  
 *`POST`参数:*
 
    名称 | 类型 | 说明
@@ -174,7 +175,7 @@ __基于Android的即时通讯应用[使用融云SDK]__
  
 ###8. **删除联系人** ###
 *方法名:* `deleteContact`<br>
-*URL:* [localhost:8080/funnychat/deleteContact]()  
+*URL:* [**host**/funnychat/deleteContact]()  
 *`POST`参数:*
 
    名称 | 类型 | 说明
