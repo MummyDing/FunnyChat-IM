@@ -2,7 +2,6 @@ package com.mummyding.app.funnychat.Aty;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Handler;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.NavigationView.OnNavigationItemSelectedListener;
 import android.support.v4.view.ViewPager;
@@ -11,18 +10,15 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.ActionMenuView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.mummyding.app.funnychat.PageAdapter.ContactPagerAdapter;
 import com.mummyding.app.funnychat.PageAdapter.ConversationPagerAdapter;
-import com.mummyding.app.funnychat.PageAdapter.SettingPageAdapter;
 import com.mummyding.app.funnychat.R;
 import com.mummyding.app.funnychat.SlideTookit.SlidingTabLayout;
 import com.mummyding.app.funnychat.Tookit.DataHelper;
@@ -46,7 +42,6 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
-    private SettingPageAdapter settingPageAdapter;
     private static boolean isExit = false;
     private long exitTime = 0;
     @Override
@@ -67,7 +62,6 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
         tv_nickname = (TextView) findViewById(R.id.tv_nickname);
         conversationPagerAdapter =  new ConversationPagerAdapter(getSupportFragmentManager(),conversationTitles,Numboftabs);
         contactPagerAdapter = new ContactPagerAdapter(getSupportFragmentManager(),contactTitles,Numboftabs);
-        settingPageAdapter = new SettingPageAdapter(getSupportFragmentManager(),settingTitles,1);
         navigationView = (NavigationView) findViewById(R.id.navigation_view);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer);
         toolbar.setTitle("会话");
@@ -109,6 +103,9 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
 
 
     }
+    /*
+        退出登陆
+     */
     private void exitLogin(){
         Intent intent = new Intent(MainActivity.this,LoginActivity.class);
         finish();
@@ -125,9 +122,7 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
             @Override
             public void onSuccess(String s) {
                 Toast.makeText(MainActivity.this, "成功登陆", Toast.LENGTH_SHORT).show();
-
             }
-
             @Override
             public void onError(RongIMClient.ErrorCode errorCode) {
                 Toast.makeText(MainActivity.this, "连接服务器失败,请检查网络设置", Toast.LENGTH_SHORT).show();
@@ -196,6 +191,9 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
         return super.onCreateOptionsMenu(menu);
     }
 
+    /*
+        按两次返回键退出登陆
+     */
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
@@ -211,9 +209,7 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
                     Toast.LENGTH_SHORT).show();
             exitTime = System.currentTimeMillis();
         } else {
-            finish();
-            Intent intent = new Intent(MainActivity.this,LoginActivity.class);
-            startActivity(intent);
+            exitLogin();
         }
     }
 }

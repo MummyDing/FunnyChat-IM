@@ -35,7 +35,6 @@ public class AddActivity extends ActionBarActivity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
-
         initView();
     }
     void initView(){
