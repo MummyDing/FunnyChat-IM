@@ -1,7 +1,8 @@
 # FunnyChat-IM
 
-__基于Android的即时通讯应用[使用融云SDK]__
-
+__基于Android的即时通讯应用[使用融云SDK]__ <br>
+Blog : http://blog.csdn.net/mummyding/article/details/48347037<br>
+GitHub:https://github.com/MummyDing/FunnyChat-IM<br>
 ***
 **Service服务端 API 接口说明**
 ***
