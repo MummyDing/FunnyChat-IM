@@ -21,7 +21,7 @@ public class QueryGroupServlet extends HttpServlet{
         * */
        String sql = "select * from GroupRS where userId=?";
        OperDataBase.init("FunnyChat",sql);
-       OperDataBase.addSQLData(1,username);
+       OperDataBase.addSQLData(1,userId);
        ResultSet rs = OperDataBase.exeGetDataSQL();
        /*
         * 构造json数据返回

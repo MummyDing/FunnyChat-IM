@@ -99,7 +99,9 @@ public class RegisterServlet extends HttpServlet{
         String res = postData.getData(url,nameValuePair);
         out.print(res);
         //获取token 存储
+        out.print("okokok");
         String token = getJSONToken(res); 
+        out.print(token);
         sql = "update User set token=? where username=?";
         OperDataBase.init("FunnyChat",sql);
         OperDataBase.addSQLData(1,token);
