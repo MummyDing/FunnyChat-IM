@@ -3,8 +3,8 @@
 Blog : http://blog.csdn.net/mummyding/article/details/48347037<br>
 GitHub:https://github.com/MummyDing/FunnyChat-IM<br>
 演示视频:   
-   [FunnyChat演示视频(带背景音乐)](http://player.youku.com/player.php/sid/XMTM1MTYxMDAwNA==/v.swf)<br>
-   [FunnyChat演示视频(带背景音乐)](http://player.youku.com/player.php/sid/XMTM1MTYwODQxNg==/v.swf)
+   [FunnyChat演示视频(不带背景音乐)](http://player.youku.com/player.php/sid/XMTM1MTYwODQxNg==/v.swf)   
+   [FunnyChat演示视频(带背景音乐)](http://player.youku.com/player.php/sid/XMTM1MTYxMDAwNA==/v.swf)
 ##应用界面
 ![alt text](http://ww4.sinaimg.cn/bmiddle/df755665gw1evwjtpvm3ej20k00zk76h.jpg) <br>
 ![alt text](http://ww1.sinaimg.cn/bmiddle/df755665gw1evwjtqk1gaj20k00zk0up.jpg)<br>
