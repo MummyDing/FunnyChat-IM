@@ -2,6 +2,7 @@
 基于Android的即时通讯应用[使用融云SDK]<br>
 Blog : http://blog.csdn.net/mummyding/article/details/48347037<br>
 GitHub:https://github.com/MummyDing/FunnyChat-IM<br>
+服务端(附API说明):https://github.com/MummyDing/FunnyChat-IM/tree/Service<br>
 
 -------------------------
 
